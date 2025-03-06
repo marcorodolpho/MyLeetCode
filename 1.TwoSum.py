@@ -6,15 +6,18 @@ class Solution(object):
     def twoSum(self, nums, target):
 
         seen_numbers =  {}
+        results = []
 
         for i, num in enumerate(nums):
             complement = target - num
 
             if complement in seen_numbers:
-                return [seen_numbers[complement], i]
-            
+                results.append([seen_numbers[complement], i])
+                
             seen_numbers[num] = i
 
+        return results
+    
 #Creating a way to execute a local test
 
 nums = list(map(int, input("Type the numbers:   ").split()))
