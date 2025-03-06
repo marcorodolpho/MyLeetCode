@@ -15,5 +15,13 @@ class Solution(object):
             
             seen_numbers[num] = i
 
-            
+#Creating a way to execute a local test
+
+nums = list(map(int, input("Type the numbers:   ").split()))
+target = int(input("Type the target:  "))
+
+solution = Solution()
+result = solution.twoSum(nums, target)
+
+print(result)            
 
